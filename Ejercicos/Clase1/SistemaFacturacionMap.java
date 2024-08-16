@@ -17,7 +17,7 @@ public class SistemaFacturacionConMap {
         clientes.add(new Cliente(102, "Cliente B"));
         clientes.add(new Cliente(103, "Cliente C"));
 
-        // Usando Maps
+        
         List<ResumenCliente> resumenClientes = generarResumenConMap(facturas, clientes);
 
         for (ResumenCliente resumen : resumenClientes) {
@@ -28,13 +28,12 @@ public class SistemaFacturacionConMap {
     public static List<ResumenCliente> generarResumenConMap(List<Factura> facturas, List<Cliente> clientes) {
         Map<Integer, Double> mapSumaImportes = new HashMap<>();
 
-        // Sumar los importes por idCliente
+     
         for (Factura factura : facturas) {
             mapSumaImportes.put(factura.idCliente,
                     mapSumaImportes.getOrDefault(factura.idCliente, 0.0) + factura.importe);
         }
 
-        // Crear la lista de resumen
         List<ResumenCliente> resumenClientes = new ArrayList<>();
         for (Cliente cliente : clientes) {
             double sumaImportes = mapSumaImportes.getOrDefault(cliente.idCliente, 0.0);
