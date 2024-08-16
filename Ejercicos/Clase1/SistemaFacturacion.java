@@ -16,7 +16,7 @@ public class SistemaFacturacion {
 
         List<ResumenCliente> resumenClientes = generarResumen(facturas, clientes);
 
-        for (ResumenCliente resumen : resumenClientes) { // Corregido: ResumenCliente en lugar de resumenCliente
+        for (ResumenCliente resumen : resumenClientes) {
             System.out.println(resumen);
         }
     }
