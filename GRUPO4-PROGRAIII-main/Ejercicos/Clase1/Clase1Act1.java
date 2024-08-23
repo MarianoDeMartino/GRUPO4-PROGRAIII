@@ -25,3 +25,6 @@ public class Clase1Act1 {
 
     la complejidad espacial es O(1), ya que solo se utiliza la variable max
  */
+
+/* prueba
+*/
